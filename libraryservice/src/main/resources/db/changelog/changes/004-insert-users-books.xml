@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Insert Users -->
+    <changeSet id="04-insert-users" author="Pedro">
+        <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Admin User"/>
+            <column name="email" value="admin@example.com"/>
+            <column name="profile" value="ADMIN"/>
+            <column name="active" valueBoolean="true"/>
+            <column name="created_date" valueDate="2023-01-01T00:00:00"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Regular User"/>
+            <column name="email" value="user@example.com"/>
+            <column name="profile" value="USER"/>
+            <column name="active" valueBoolean="true"/>
+            <column name="created_date" valueDate="2023-01-01T00:00:00"/>
+        </insert>
+    </changeSet>
+
+    <!-- Insert Books -->
+    <changeSet id="04-insert-books" author="Pedro">
+        <insert tableName="books">
+            <column name="id" valueNumeric="1"/>
+            <column name="title" value="Book One"/>
+            <column name="category" value="Fiction"/>
+            <column name="quantity" valueNumeric="10"/>
+            <column name="available" valueBoolean="true"/>
+        </insert>
+        <insert tableName="books">
+            <column name="id" valueNumeric="2"/>
+            <column name="title" value="Book Two"/>
+            <column name="category" value="Non-Fiction"/>
+            <column name="quantity" valueNumeric="5"/>
+            <column name="available" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
