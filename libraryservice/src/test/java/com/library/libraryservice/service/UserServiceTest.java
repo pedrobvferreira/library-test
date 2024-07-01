@@ -40,7 +40,7 @@ public class UserServiceTest {
 
         List<UsersDTO> result = userService.getAllUsers();
         assertEquals(2, result.size());
-        assertEquals("John Doe", result.get(0).getName());
+        assertEquals("John Doe", result.getFirst().getName());
     }
 
     @Test

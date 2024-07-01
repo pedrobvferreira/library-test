@@ -69,6 +69,9 @@ The build artifacts will be stored in the `dist/` directory.
 Run `ng serve` for a dev server
 ```bash
 ng serve
+
+or:
+ng serve --proxy-config proxy.conf.json
 ```
 Navigate to http://localhost:4200/.
 The application will automatically reload if you change any of the source files.
